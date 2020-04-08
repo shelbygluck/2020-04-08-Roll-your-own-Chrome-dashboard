@@ -6,33 +6,21 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <h2>your new tab <span class='hl'>JS</span></h2>
-    <canvas id="canvas" width="1200" height="800"></canvas>
 
     <div class="controls">
-        <label for="spacing">Spacing:</label>
-        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
-
-        <label for="blur">Blur:</label>
-        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
-
-        <label for="base">Base Color</label>
-        <input id="base" type="color" name="base" value="#ffc600">
+            <label for="base" id="colorLabel">color</label>
+            <input id="base" type="color" name="base" value="#ffc600">
     </div>
 
+    <canvas id="canvas" width="1000" height="600"></canvas>
+
+    <h2 id="title" class='hl'>banksy</h2>
  
   <style>
-    :root {
-      --base: #ffc600;
-    }
 
-    img {
-      padding: 10px;
-      background: var(--base);
-    }
 
     .hl {
-      color: var(--base);
+      color:  #ffc600;
     }
 
     body {
@@ -47,6 +35,7 @@
     .controls {
       margin-bottom: 50px;
     }
+    
 
     input {
       width: 100px;

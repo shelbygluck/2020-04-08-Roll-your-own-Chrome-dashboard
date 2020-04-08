@@ -38,6 +38,23 @@ function reqListener () {
       lastX = e.offsetX //reset starting position
       lastY = e.offsetY
   }
+
+
+  //handling color change
+
+const colorSelection = document.getElementById('base')
+colorSelection.addEventListener('change', handleUpdate)
+// colorSelection.addEventListener('mousemove', handleUpdate)
+
+function handleUpdate() {
+  console.log(this)
+
+  const header = document.getElementById('title')
+  const colorLabel = document.getElementById('colorLabel')
+  header.style.setProperty("color", this.value)
+  colorLabel.style.setProperty("color", this.value)
+  context.strokeStyle = this.value
+}
 }
 
 
@@ -47,3 +64,4 @@ function reqListener () {
 
   
   
+
